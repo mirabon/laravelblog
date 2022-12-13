@@ -55,4 +55,10 @@ warden shell -c '
     composer install
 '
 
+echo "\nStarting migrate..."
+
+warden shell -c '
+    php artisan migrate
+'
+
 printf "\n127.0.0.1 ${TRAEFIK_DOMAIN}" | sudo tee -a /etc/hosts
