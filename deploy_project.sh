@@ -55,6 +55,12 @@ warden shell -c '
     composer install
 '
 
+echo "Starting npm install..."
+
+warden shell -c '
+    npm install
+'
+
 echo "\nStarting migrate..."
 
 warden shell -c '
